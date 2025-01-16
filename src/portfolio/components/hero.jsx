@@ -5,6 +5,18 @@ import "swiper/css/autoplay";
 import { Autoplay } from "swiper/modules";
 import { ArrowRight } from "lucide-react";
 import { useInViewAnimation } from "../hooks/use-in-view";
+import { FaJs, FaHtml5, FaCss3Alt, FaReact, FaGitAlt } from "react-icons/fa";
+import {
+  SiTypescript,
+  SiTailwindcss,
+  SiNextdotjs,
+  SiRedux,
+  SiTestinglibrary,
+  SiMui,
+} from "react-icons/si";
+import { TbForms } from "react-icons/tb";
+import { RiTeamLine } from "react-icons/ri";
+import { BsCheck2Square } from "react-icons/bs";
 
 export function Hero() {
   const { ref, hasAnimated } = useInViewAnimation();
@@ -34,22 +46,70 @@ export function Hero() {
   const title = "Hi, I'm Omar — Crafting Modern & Responsive Web Experiences.";
 
   const technologies = [
-    "JavaScript",
-    "TypeScript",
-    "HTML5",
-    "CSS/SCSS",
-    "Tailwind CSS",
-    "React.js",
-    "Next.js",
-    "Redux Toolkit",
-    "Redux Toolkit Query",
-    "React hook form",
-    "Git/GitHub",
-    "React Native",
-    "Material UI",
-    "unit test",
-    "Agile Methodology",
-    "UI/UX Principles",
+    {
+      title: "JavaScript",
+      icon: <FaJs className="text-yellow-500 text-3xl mx-auto" />,
+    },
+    {
+      title: "TypeScript",
+      icon: <SiTypescript className="text-blue-500 text-3xl mx-auto" />,
+    },
+    {
+      title: "HTML5",
+      icon: <FaHtml5 className="text-orange-600 text-3xl mx-auto" />,
+    },
+    {
+      title: "CSS/SCSS",
+      icon: <FaCss3Alt className="text-blue-600 text-3xl mx-auto" />,
+    },
+    {
+      title: "Tailwind CSS",
+      icon: <SiTailwindcss className="text-teal-500 text-3xl mx-auto" />,
+    },
+    {
+      title: "React.js",
+      icon: <FaReact className="text-blue-400 text-3xl mx-auto" />,
+    },
+    {
+      title: "Next.js",
+      icon: <SiNextdotjs className="text-gray-800 text-3xl mx-auto" />,
+    },
+    {
+      title: "Redux Toolkit",
+      icon: <SiRedux className="text-purple-500 text-3xl mx-auto" />,
+    },
+    {
+      title: "Redux Toolkit Query",
+      icon: <SiRedux className="text-purple-500 text-3xl mx-auto" />,
+    },
+    {
+      title: "React Hook Form",
+      icon: <TbForms className="text-red-500 text-3xl mx-auto" />,
+    },
+    {
+      title: "Git/GitHub",
+      icon: <FaGitAlt className="text-orange-500 text-3xl mx-auto" />,
+    },
+    {
+      title: "React Native",
+      icon: <FaReact className="text-blue-400 text-3xl mx-auto" />,
+    },
+    {
+      title: "Material UI",
+      icon: <SiMui className="text-blue-500 text-3xl mx-auto" />,
+    },
+    {
+      title: "Unit Test",
+      icon: <SiTestinglibrary className="text-red-500 text-3xl mx-auto" />,
+    },
+    {
+      title: "Agile Methodology",
+      icon: <RiTeamLine className="text-green-500 text-3xl mx-auto" />,
+    },
+    {
+      title: "UI/UX Principles",
+      icon: <BsCheck2Square className="text-gray-700 text-3xl mx-auto" />,
+    },
   ];
 
   return (
@@ -113,7 +173,8 @@ export function Hero() {
               {technologies.map((tech, index) => (
                 <SwiperSlide key={index}>
                   <div className="text-sm font-medium text-gray-600 text-center">
-                    {tech}
+                    {tech.icon}
+                    <p>{tech.title}</p>
                   </div>
                 </SwiperSlide>
               ))}
