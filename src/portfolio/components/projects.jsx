@@ -108,7 +108,7 @@ export function Projects() {
                 <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4">
                   <a
                     href={project.links.github}
-                    className="p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
+                    className="p-2 rounded-full bg-white/40 hover:bg-white/60 transition-colors"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -116,7 +116,7 @@ export function Projects() {
                   </a>
                   <a
                     href={project.links.live}
-                    className="p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
+                    className="p-2 rounded-full bg-white/40 hover:bg-white/60 transition-colors"
                     target="_blank"
                     rel="noopener noreferrer"
                   >

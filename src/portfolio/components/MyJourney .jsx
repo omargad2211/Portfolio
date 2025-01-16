@@ -1,31 +1,34 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useInViewAnimation } from "../hooks/use-in-view";
+import { FaTooth, FaUserGraduate } from "react-icons/fa";
+import { BsLaptop } from "react-icons/bs";
+import { IoBookSharp } from "react-icons/io5";
 
 const steps = [
   {
     id: 1,
     title: "Dentistry",
     description: "Started as a Dentist, exploring the field of healthcare.",
-    icon: "🦷",
+    icon: <FaTooth />,
   },
   {
     id: 2,
     title: "Self-Learning",
     description: "Self-taught programming through online resources.",
-    icon: "📚",
+    icon: <IoBookSharp />,
   },
   {
     id: 3,
     title: "ITI",
     description: "Joined the ITI program to enhance my tech skills.",
-    icon: "🎓",
+    icon: <FaUserGraduate />,
   },
   {
     id: 4,
     title: "Depo Web Company",
     description: "Started my career as a Front-End Developer.",
-    icon: "💻",
+    icon: <BsLaptop />,
   },
 ];
 
@@ -47,7 +50,7 @@ const MyJourney = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.5 }}
                 >
-                  <div className="w-14 h-14 flex items-center justify-center bg-gray-200 text-white rounded-full text-2xl mb-4">
+                  <div className="w-14 h-14 flex items-center justify-center bg-gray-200 text-gray-600 rounded-full text-2xl mb-4">
                     {step.icon}
                   </div>
                   <h3 className="text-lg font-semibold">{step.title}</h3>
