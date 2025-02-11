@@ -7,6 +7,22 @@ import { useInViewAnimation } from "../hooks/use-in-view";
 export function Projects() {
   const projects = [
     {
+      title: "CineScope",
+      description: "Movies website",
+      image: "images/cinescope-mockup.png",
+      tags: [
+        "React",
+        "Redux Toolkit Query",
+        "Tailwind CSS",
+        "framer motion",
+        "swiper.js",
+      ],
+      links: {
+        github: "https://github.com/omargad2211/Cinescope.git",
+        live: "https://cinescope-ten.vercel.app/ ",
+      },
+    },
+    {
       title: "MetroMingle",
       description: "Blogging website",
       image: "images/metro.png",
@@ -95,7 +111,7 @@ export function Projects() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <motion.div
-              key={project.title}
+              key={project.title + index}
               variants={itemVariants}
               className="rounded-lg overflow-hidden bg-white shadow-lg hover:shadow-xl transition-shadow"
             >
