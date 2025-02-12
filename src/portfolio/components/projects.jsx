@@ -9,7 +9,7 @@ export function Projects() {
     {
       title: "CineScope",
       description: "Movies website",
-      image: "images/cinescope-mockup.png",
+      image: "images/cinescope.png",
       tags: [
         "React",
         "Redux Toolkit Query",
