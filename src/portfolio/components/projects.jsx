@@ -61,31 +61,6 @@ export function Projects() {
       },
     },
     {
-      title: "Depo Web Company Website",
-      description:
-        "Official company website showcasing services and portfolio.",
-      image: "/images/depo.png",
-      tags: [
-        "React",
-        "Django",
-        "Tailwind CSS",
-        "Framer Motion",
-        "Swiper.js",
-        "i18next",
-        "React Hook Form",
-      ],
-      features: [
-        "Responsive design",
-        "Service pages",
-        "Portfolio section",
-        "Contact form",
-      ],
-      links: {
-        github: "#",
-        live: "https://depowebeg.com/",
-      },
-    },
-    {
       title: "Prime Care",
       description: "Pharmacy E-Commerce Platform",
       image: "/images/prime.png",

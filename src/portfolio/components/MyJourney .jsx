@@ -1,8 +1,7 @@
-import React from "react";
 import { motion } from "framer-motion";
 import { useInViewAnimation } from "../hooks/use-in-view";
 import { FaTooth, FaUserGraduate } from "react-icons/fa";
-import { BsLaptop } from "react-icons/bs";
+import { BsLaptop, BsPhone } from "react-icons/bs";
 import { IoBookSharp } from "react-icons/io5";
 
 const steps = [
@@ -29,6 +28,12 @@ const steps = [
     title: "Depo Web Company",
     description: "Started my career as a Front-End Developer.",
     icon: <BsLaptop />,
+  },
+  {
+    id: 5,
+    title: "Depx Company",
+    description: "Joined as React native Developer.",
+    icon: <BsPhone />,
   },
 ];
 
