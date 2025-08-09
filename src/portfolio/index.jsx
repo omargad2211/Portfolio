@@ -24,6 +24,7 @@ import {
   Calendar,
   Star,
 } from "lucide-react";
+import emailjs from "emailjs-com";
 
 // Custom Hooks
 const useMousePosition = () => {
@@ -618,17 +619,29 @@ const Contact = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [formStatus, setFormStatus] = useState("");
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    setIsLoading(true);
+    setIsLoading(true); // Set loading state to true
 
-    // Simulate form submission
-    setTimeout(() => {
-      setIsLoading(false);
-      setFormStatus("Message sent successfully!");
-      e.target.reset();
-      setTimeout(() => setFormStatus(""), 3000);
-    }, 2000);
+    emailjs
+      .sendForm(
+        "service_r339v3q",
+        "template_19lqq9f",
+        e.target,
+        "WSSb5ojVuhYEeO7hy"
+      )
+      .then(
+        (result) => {
+          setFormStatus("Message sent successfully!");
+          e.target.reset();
+        },
+        (error) => {
+          alert("Failed to send message.");
+        }
+      )
+      .finally(() => {
+        setIsLoading(false);
+      });
   };
 
   const contactInfo = [
